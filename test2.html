@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutan Kumari | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-sm z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-red-400">Nutan Kumari</h1>
+        <nav class="space-x-6 hidden md:block">
+          <a href="#about" class="hover:text-red-400">About</a>
+          <a href="#projects" class="hover:text-red-400">Projects</a>
+          <a href="#leadership" class="hover:text-red-400">Leadership</a>
+          <a href="#contact" class="hover:text-red-400">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="about" class="min-h-screen flex items-center justify-center text-center px-6">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-red-400">Hi, I'm Nutan Kumari</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          Senior Principal Applications Developer | Oracle CPQ & Redwood UI Expert  
+          <br />
+          I build modern, scalable enterprise UIs using Redwood, JET, APEX, and REST.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">Oracle CPQ</span>
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">Redwood UI</span>
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">Oracle JET</span>
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">APEX</span>
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">VBCS</span>
+          <span class="bg-slate-700 px-4 py-2 rounded-xl">REST APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-6 bg-slate-800">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center text-red-400">Featured Projects</h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Project Card -->
+          <div class="bg-slate-700 p-6 rounded-2xl shadow-lg hover:shadow-red-400/30 hover:-translate-y-1 transition fade-in">
+            <h3 class="text-2xl font-semibold mb-2">Next-Gen Shopping Cart (Redwood UI)</h3>
+            <video controls class="rounded-xl w-full mb-4">
+              <source src="videos/shopping-cart.mp4" type="video/mp4" />
+            </video>
+            <p class="text-gray-300 mb-3">
+              Redesigned CPQ’s shopping cart using Redwood UI & JET, enabling fluid interactions and modern responsiveness.
+            </p>
+            <ul class="list-disc ml-5 text-gray-400">
+              <li>~30% faster rendering</li>
+              <li>40% fewer API calls</li>
+            </ul>
+            <p class="mt-2 text-sm text-gray-400">Tech Stack: Oracle JET, Redwood, REST APIs</p>
+          </div>
+
+          <!-- Price Waterfall -->
+          <div class="bg-slate-700 p-6 rounded-2xl shadow-lg hover:shadow-red-400/30 hover:-translate-y-1 transition fade-in">
+            <h3 class="text-2xl font-semibold mb-2">Price Waterfall Visualization</h3>
+            <video controls class="rounded-xl w-full mb-4">
+              <source src="videos/price-waterfall.mp4" type="video/mp4" />
+            </video>
+            <p class="text-gray-300 mb-3">
+              Interactive tool to visualize complex pricing logic using JET Charts and animation transitions.
+            </p>
+            <ul class="list-disc ml-5 text-gray-400">
+              <li>Simplified discount logic visualization</li>
+              <li>Improved business understanding</li>
+            </ul>
+            <p class="mt-2 text-sm text-gray-400">Tech Stack: Oracle JET Charts, REST API, ADF</p>
+          </div>
+
+          <!-- Collaborative Quoting -->
+          <div class="bg-slate-700 p-6 rounded-2xl shadow-lg hover:shadow-red-400/30 hover:-translate-y-1 transition fade-in">
+            <h3 class="text-2xl font-semibold mb-2">Collaborative Quoting Framework</h3>
+            <video controls class="rounded-xl w-full mb-4">
+              <source src="videos/collab-quote.mp4" type="video/mp4" />
+            </video>
+            <p class="text-gray-300 mb-3">
+              Enabled multi-user editing on a single quote using polling-based sync with REST API orchestration.
+            </p>
+            <ul class="list-disc ml-5 text-gray-400">
+              <li>10+ concurrent users supported</li>
+              <li>Real-time data updates</li>
+            </ul>
+            <p class="mt-2 text-sm text-gray-400">Tech Stack: Oracle JET, REST APIs, CPQ Commerce</p>
+          </div>
+
+          <!-- Array Attributes -->
+          <div class="bg-slate-700 p-6 rounded-2xl shadow-lg hover:shadow-red-400/30 hover:-translate-y-1 transition fade-in">
+            <h3 class="text-2xl font-semibold mb-2">Array Attributes & Configurator Modernization</h3>
+            <video controls class="rounded-xl w-full mb-4">
+              <source src="videos/array-attributes.mp4" type="video/mp4" />
+            </video>
+            <p class="text-gray-300 mb-3">
+              Revamped configurator UI with tree-based array attribute visualization for better usability and maintainability.
+            </p>
+            <ul class="list-disc ml-5 text-gray-400">
+              <li>Tree-driven configuration panels</li>
+              <li>Dynamic attribute rendering</li>
+            </ul>
+            <p class="mt-2 text-sm text-gray-400">Tech Stack: JET TreeView, REST APIs, APEX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Impact -->
+    <section id="leadership" class="py-20 px-6 bg-slate-900">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 text-red-400">Technical Leadership & Impact</h2>
+        <ul class="text-gray-300 space-y-4 max-w-3xl mx-auto text-left">
+          <li>🚀 Led Redwood UI adoption across Oracle CPQ and Fusion APEX apps.</li>
+          <li>⚡ Improved page load time by 25% through performance tuning.</li>
+          <li>🧩 Partnered with VBCS and JET teams for UI component standardization.</li>
+          <li>👩‍🏫 Mentored developers on scalable UI architecture and accessibility.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 bg-slate-800">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 text-red-400">Get in Touch</h2>
+        <p class="text-gray-300 mb-8">
+          Have an opportunity or collaboration in mind? Let’s connect!
+        </p>
+        <form class="space-y-4 text-left">
+          <input type="text" placeholder="Name" class="w-full p-3 rounded-lg bg-slate-700 text-white" required />
+          <input type="email" placeholder="Email" class="w-full p-3 rounded-lg bg-slate-700 text-white" required />
+          <textarea placeholder="Message" class="w-full p-3 rounded-lg bg-slate-700 text-white" rows="4" required></textarea>
+          <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-lg w-full">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-400 bg-slate-900 border-t border-slate-700">
+      © 2025 Nutan Kumari | Built with ❤️ using Tailwind CSS
+    </footer>
+
+    <script>
+      // Simple fade-in on scroll
+      const fadeEls = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+      fadeEls.forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
