@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutan Kumari | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter', sans-serif; line-height:1.6; background:#f9fafb; color:#111827; }
+
+  header { text-align:center; padding:3rem 1rem; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:white; }
+  header h1 { font-size:3rem; margin-bottom:.5rem; }
+  header p { font-size:1.2rem; color:#e0e7ff; }
+  .contact-buttons { margin-top:1.5rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .contact-buttons a { text-decoration:none; color:#6366f1; background:white; padding:.5rem 1rem; border-radius:.5rem; font-weight:500; transition:0.2s; }
+  .contact-buttons a:hover { background:#e0e7ff; transform:translateY(-2px); }
+
+  section { max-width:1200px; margin:0 auto; padding:1.5rem 1rem; }
+  section h2 { font-size:2rem; margin-bottom:1.5rem; border-bottom:2px solid #e5e7eb; padding-bottom:.5rem; color:#6366f1; }
+  .about p { margin-bottom:0.5rem; color:#4b5563; }
+
+  .projects .grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+  @media(min-width:768px) { .projects .grid { grid-template-columns:repeat(2,1fr); } }
+
+  .card { background:white; border-radius:.5rem; padding:1rem; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:0.2s; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 10px 15px rgba(0,0,0,0.2); }
+  .card h3 { font-size:1.25rem; margin:0.5rem 0; color:#111827; }
+  .card p { font-size:.95rem; color:#4b5563; line-height:1.4; }
+
+  .card-images {
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    margin-top: 1rem; 
+  }
+  .card-images img, .card-images video {
+    flex: 1 1 calc(33.33% - 0.33rem);
+    height:200px;
+    object-fit:cover;
+    border-radius:.5rem;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:transform 0.3s ease;
+  }
+  
+
+  @media(max-width:1024px) { .card-images img, .card-images video { flex:1 1 calc(50% - 0.25rem); height:180px; } }
+  @media(max-width:600px) { .card-images img, .card-images video { flex:1 1 100%; height:150px; } }
+
+  .skills ul { display:grid; grid-template-columns:1fr; gap:.5rem; list-style-type:disc; padding-left:1.25rem; }
+  @media(min-width:768px) { .skills ul { grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:1024px) { .skills ul { grid-template-columns:repeat(3,1fr); } }
+
+  footer { text-align:center; padding:2rem 1rem; border-top:1px solid #e5e7eb; color:#6b7280; font-size:.9rem; background:#f9fafb; }
+
+  /* Modal / Lightbox */
+  .modal {
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+  }
+  .modal-content {
+    max-width:95vw;
+    max-height:95vh;
+    border-radius:.5rem;
+    object-fit:contain;
+    animation:zoomIn 0.3s ease;
+  }
+
+ .card h3 {
+      color: #ff4b1f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 8px;
+    }
+
+  /* Contact */
+    .contact {
+      background: linear-gradient(135deg, #ff4b1f, #ff9068);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contact a:hover {
+      color: #000dff;
+    }
+   /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      list-style: none;
+    }
+
+    .skills li {
+      background: bisque;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .skills li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: #6b73ff;
+      color: #fff;
+    }
+
+  .close {
+    position:absolute;
+    top:1rem;
+    right:1.5rem;
+    color:white;
+    font-size:3rem;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:1001;
+  }
+ /* Fade in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  @keyframes zoomIn { from {transform:scale(0.7);} to {transform:scale(1);} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nutan Kumari</h1>
+  <p>Principal Front-End Architect | Web Platform & UI Engineering Leader</p>
+  <div class="contact-buttons">
+    <a href="mailto:nutantanu@gmail.com">Email</a>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>Experienced Front-End Architect and UI Engineering specialist with a strong background in designing, developing, and optimizing scalable web applications. Proficient in modern JavaScript frameworks, RESTful API integration, and responsive design principles. Skilled in building reusable UI components, improving performance, and delivering seamless, user-centric experiences across devices and browsers. Known for technical depth, attention to detail, and a commitment to crafting elegant, maintainable, and high-performing web interfaces aligned with business objectives.</p>
+</section>
+
+<section class="projects">
+  <h2>Featured/Sample Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Price Waterfall</h3>
+      <p>The price waterfall enables users to understand how the final price is derived. When enabled, the price waterfall displays in the charge drawer and the sub-document UI. The Charge Details View displays the charge information and also displays additional selected attributes for price waterfall.</p>
+      <div class="card-images">
+        <img src="images/projects/pc1.png" alt="Price Waterfall 1" class="zoomable">
+        <img src="images/projects/pc2.png" alt="Price Waterfall 2" class="zoomable">
+        <img src="images/projects/pc3.png" alt="Price Waterfall 3" class="zoomable">
+        <video src="images/projects/pricewaterfall.mp4" controls controlsList="nodownload" muted loop class="zoomable"></video>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Gen AIQuote Summary</h3>
+      <p>A smart, interactive, and AI-enhanced dashboard that provides sales and approval teams with a comprehensive view of each deal, integrating powerful GenAI insights with a modern, user-friendly interface for faster and more informed quoting decisions.</p>
+      <div class="card-images">
+        <img src="images/projects/genai.png" alt="Gen AI Quote Summary" class="zoomable">
+        <video src="images/projects/quoteSummary.mp4" controls controlsList="nodownload" muted loop class="zoomable"></video>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Price Analytics</h3>
+      <p>Price analytics in Oracle CPQ involves
+leveraging historical data, AI-powered models, and real-time guidance to help sales teams optimize pricing, increase profitability, and close deals faster. Key features include AI-driven discount recommendations, win probability predictions, and price optimization guidance, all integrated directly into the sales workflow. It also offers tools to analyze pricing trends over time, understand historical price points, and visualize price guidance through various graphs</p>
+      <div class="card-images">
+        <video src="images/projects/ana.mp4" controls controlsList="nodownload" muted loop class="zoomable"></video>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Shopping Cart</h3>
+      <p>Shopping cart is
+a virtual tool that allows users to view, manage, and hold products and services for purchase before creating a quote or order. It displays the number of items, individual prices, and the total cost, enabling users to build complex configurations and then either checkout items to a new quote or add them to an existing one. It integrates with the CPQ configuration and commerce sections to provide a seamless quote-to-cash experience</p>
+      <div class="card-images">
+        <video src="images/projects/shopping.mp4" controls controlsList="nodownload" muted loop class="zoomable"></video>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+    <h2 class="fade-in">Skills & Tools</h2>
+    <ul class="skills fade-in">
+      <li>JavaScript (ES6+), HTML5, CSS3</li>
+      <li>React, Oracle JET, Redwood UI</li>
+      <li>VBCS, ADF, KnockoutJS</li>
+      <li>REST APIs, SOAP Services</li>
+      <li>Git, JIRA, CI/CD</li>
+      <li>Responsive Design & Accessibility</li>
+    </ul>
+  </section>
+<!-- Contact -->
+  <section class="contact">
+    <h2 class="fade-in">Contact</h2>
+    <p class="fade-in">Email: <a href="mailto:nutantanu@gmail.com">nutantanu@gmail.com</a></p>
+    <p class="fade-in">GitHub: <a href="https://github.com/NutanTanu/" target="_blank">https://github.com/NutanTanu/</a></p>
+  </section>
+
+
+<footer>
+  © <span id="year"></span> Nutan Kumari | Designed with ❤️ for the Web
+</footer>
+
+<!-- Modal / Lightbox -->
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-img');
+const closeBtn = document.querySelector('.close');
+
+document.querySelectorAll('.zoomable').forEach(el => {
+  el.addEventListener('click', () => {
+    if(el.tagName === 'IMG') modalImg.src = el.src;
+    else return; // videos will not zoom, only images
+    modal.style.display = 'flex';
+  });
+});
+
+closeBtn.addEventListener('click', () => modal.style.display = 'none');
+modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
+</script>
+
+</body>
+</html>
