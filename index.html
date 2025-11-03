@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutan Kumari Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/src/input.css">
+  <style>
+    /* Reset some basics */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f4f5f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6b73ff, #000dff, #ff4b1f);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    header a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    header a:hover {
+      background: #fff;
+      color: #000dff;
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #6b73ff;
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #000dff;
+    }
+
+    /* Project cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      color: #ff4b1f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 8px;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      list-style: none;
+    }
+
+    .skills li {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .skills li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: #6b73ff;
+      color: #fff;
+    }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(135deg, #ff4b1f, #ff9068);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contact a:hover {
+      color: #000dff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+    }
+
+    /* Fade in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="fade-in">Nutan Kumari</h1>
+    <p class="fade-in">Principal Front-End Architect | Web Platform & UI Engineering Leader</p>
+    <div class="fade-in">
+      <a href="mailto:nutantanu@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nutan-kumari" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section>
+    <h2 class="fade-in">About Me</h2>
+    <p class="fade-in">
+      I am a Senior Principal Software Developer specializing in modern web and UI architecture.
+      With over 15 years of experience building large-scale enterprise applications, I focus on creating high-performing,
+      scalable, and user-friendly web platforms. My expertise spans JavaScript, Oracle JET, React, Redwood UI, and VBCS.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2 class="fade-in">Projects</h2>
+    <div class="projects">
+      <div class="card fade-in">
+        <h3>NextGen CPQ UI Modernization</h3>
+        <p>Principal Front-End Architect</p>
+        <p>Tech: Oracle JET, Redwood UI, JavaScript</p>
+        <p>Description: Led modernization of CPQ UI and improved performance by 30%.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Collaborative Quoting Flow</h3>
+        <p>UI Engineering Lead</p>
+        <p>Tech: Oracle JET, VBCS, REST APIs</p>
+        <p>Description: Architected real-time collaboration experience in CPQ quotes.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Sales Cloud Simplified UI</h3>
+        <p>Front-End Architect</p>
+        <p>Tech: Oracle ADF, Redwood Design System</p>
+        <p>Description: Simplified and responsive UI for Sales Cloud modules.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2 class="fade-in">Skills & Tools</h2>
+    <ul class="skills fade-in">
+      <li>JavaScript (ES6+), HTML5, CSS3</li>
+      <li>React, Oracle JET, Redwood UI</li>
+      <li>VBCS, ADF, KnockoutJS</li>
+      <li>REST APIs, SOAP Services</li>
+      <li>Git, JIRA, CI/CD</li>
+      <li>Responsive Design & Accessibility</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2 class="fade-in">Contact</h2>
+    <p class="fade-in">Email: <a href="mailto:nutantanu@gmail.com">nutantanu@gmail.com</a></p>
+    <p class="fade-in">LinkedIn: <a href="https://www.linkedin.com/in/nutan-kumari" target="_blank">linkedin.com/in/nutan-kumari</a></p>
+    <p class="fade-in">GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Nutan Kumari | Designed with ❤️
+  </footer>
+
+</body>
+</html>
